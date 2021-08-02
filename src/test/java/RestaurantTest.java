@@ -59,4 +59,10 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void calculate_order_total_should_return_the_total_order_value_given_the_names_of_items() {
+        int calculatedOrderTotal = restaurant.calculateOrderTotal("Sweet corn soup", "Vegetable lasagne");
+        int expectedOrderTotal = 119 + 269;
+        assertEquals(expectedOrderTotal, calculatedOrderTotal);
+    }
 }
